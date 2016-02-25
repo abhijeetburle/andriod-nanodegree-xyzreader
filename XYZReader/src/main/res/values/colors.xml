@@ -25,4 +25,10 @@
     <color name="theme_accent">#FF5252</color>
     <color name="theme_accent_alternate">#E040FB</color>
     <color name="ltgray">#B2EBF2</color>
+
+
+    <color name="theme_white">#00000000</color>
+    <color name="theme_gradient_001">#00000000</color>
+    <color name="theme_gradient_002">#00000000</color>
+    <color name="theme_gradient_003">#1d000000</color>
 </resources>

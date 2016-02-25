@@ -24,6 +24,7 @@ import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
+import com.example.xyzreader.util.FormatterUtil;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -143,13 +144,10 @@ public class ArticleListActivity extends ActionBarActivity implements
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
-            holder.subtitleView.setText(
-                    DateUtils.getRelativeTimeSpanString(
-                            mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
-                            System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
-                            DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by "
-                            + mCursor.getString(ArticleLoader.Query.AUTHOR));
+            holder.authorView.setText(mCursor.getString(ArticleLoader.Query.AUTHOR).split(" ")[0]);
+            holder.dateView.setText(FormatterUtil.formatDateToTimeEllapsed(
+                                    mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE))
+            );
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
@@ -165,13 +163,15 @@ public class ArticleListActivity extends ActionBarActivity implements
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public DynamicHeightNetworkImageView thumbnailView;
         public TextView titleView;
-        public TextView subtitleView;
+        public TextView authorView;
+        public TextView dateView;
 
         public ViewHolder(View view) {
             super(view);
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
-            subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            authorView = (TextView) view.findViewById(R.id.article_author);
+            dateView = (TextView) view.findViewById(R.id.article_date);
         }
     }
 }
