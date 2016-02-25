@@ -26,10 +26,12 @@
                     android:scaleType="centerCrop"
                      />
 
+                <!-- TODO : NEED TO DELETE THIS : START -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="112dp"
                     android:background="@drawable/photo_background_protection" />
+                <!-- TODO : NEED TO DELETE THIS : END -->
 
             </FrameLayout>
 

@@ -7,5 +7,13 @@
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="action_up_width">56dp</dimen>
+    <dimen name="list_view_padding_top">116dp</dimen>
+    <dimen name="list_view_padding_bottom">28dp</dimen>
+    <dimen name="list_toolbar_height">112dp</dimen>
+
+    <!-- article item -->
+    <dimen name="item_margin">4dp</dimen>
+    <dimen name="item_padding">4dp</dimen>
 
 </resources>
