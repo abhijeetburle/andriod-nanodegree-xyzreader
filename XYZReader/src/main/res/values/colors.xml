@@ -16,10 +16,13 @@
 -->
 
 <resources>
-    <color name="photo_placeholder">#ccc</color>
+    <color name="photo_placeholder">#00BCD4</color>
 
-    <color name="theme_primary">#04561A</color>
-    <color name="theme_primary_dark">#04561A</color>
-    <color name="theme_accent">#04561A</color>
-    <color name="ltgray">#ffe0e0e0</color>
+    <color name="theme_primary_light">#4DD0E1</color>
+    <color name="theme_primary">#00BCD4</color>
+    <color name="theme_primary_dark">#0097A7</color>
+    <color name="theme_primary_darkest">#006064</color>
+    <color name="theme_accent">#FF5252</color>
+    <color name="theme_accent_alternate">#E040FB</color>
+    <color name="ltgray">#B2EBF2</color>
 </resources>

@@ -32,7 +32,7 @@
             android:paddingTop="@dimen/item_padding"
             android:paddingRight="@dimen/item_padding"
             android:paddingBottom="@dimen/item_padding"
-            android:textColor="@color/ltgray"
+            android:textColor="@color/theme_primary"
             android:ellipsize="end"
             android:maxLines="4" />
 
@@ -44,7 +44,7 @@
             android:paddingLeft="@dimen/item_padding"
             android:paddingRight="@dimen/item_padding"
             android:paddingBottom="@dimen/item_padding"
-            android:textColor="#6000"
+            android:textColor="@color/theme_primary"
             android:maxLines="1"
             android:singleLine="true"
             android:ellipsize="end" />
