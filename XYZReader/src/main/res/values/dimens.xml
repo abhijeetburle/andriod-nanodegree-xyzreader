@@ -15,5 +15,6 @@
     <!-- article item -->
     <dimen name="item_margin">4dp</dimen>
     <dimen name="item_padding">4dp</dimen>
+    <dimen name="item_padding_triple">16dp</dimen>
 
 </resources>

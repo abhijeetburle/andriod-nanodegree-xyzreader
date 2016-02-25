@@ -1,5 +1,7 @@
 package com.example.xyzreader.ui;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -129,12 +131,22 @@ public class ArticleListActivity extends ActionBarActivity implements
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
+            final View thumbnailView = view.findViewById(R.id.thumbnail);
             final ViewHolder vh = new ViewHolder(view);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                        Bundle bundle = null;
+                        bundle = ActivityOptions.makeSceneTransitionAnimation(
+                                ((Activity) thumbnailView.getContext()), thumbnailView,
+                                thumbnailView.getTransitionName()).toBundle();
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),bundle);
+                    }else {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    }
                 }
             });
             return vh;
@@ -146,7 +158,7 @@ public class ArticleListActivity extends ActionBarActivity implements
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             holder.authorView.setText(mCursor.getString(ArticleLoader.Query.AUTHOR).split(" ")[0]);
             holder.dateView.setText(FormatterUtil.formatDateToTimeEllapsed(
-                                    mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE))
+                            mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE))
             );
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),

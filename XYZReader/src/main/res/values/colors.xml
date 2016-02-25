@@ -18,6 +18,7 @@
 <resources>
     <color name="photo_placeholder">#00BCD4</color>
 
+    <color name="theme_primary_lighter">#E0F7FA</color>
     <color name="theme_primary_light">#4DD0E1</color>
     <color name="theme_primary">#00BCD4</color>
     <color name="theme_primary_dark">#0097A7</color>
@@ -27,7 +28,7 @@
     <color name="ltgray">#B2EBF2</color>
 
 
-    <color name="theme_white">#00000000</color>
+
     <color name="theme_gradient_001">#00000000</color>
     <color name="theme_gradient_002">#00000000</color>
     <color name="theme_gradient_003">#1d000000</color>
