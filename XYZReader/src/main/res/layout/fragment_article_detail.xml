@@ -2,6 +2,7 @@
     android:id="@+id/main_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,7 +27,7 @@
             android:textColor="@color/theme_accent"
             android:textStyle="bold"
             android:textSize="@dimen/detail_title_text_size"
-            android:text="ARTICLE TITLE1"
+            tools:text="ARTICLE TITLE1"
             >
             <ImageView
                 android:id="@+id/photo"
@@ -48,7 +49,7 @@
                 android:textColor="@color/theme_accent"
                 android:textStyle="bold"
                 android:textSize="@dimen/detail_title_text_size"
-                android:text="ARTICLE TITLE2"
+                tools:text="ARTICLE TITLE2"
                 >
 
             </android.support.v7.widget.Toolbar>
@@ -94,7 +95,7 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/detail_title_text_size"
                         android:lineSpacingMultiplier="0.9"
-                        android:text="ARTICLE TITLE"/>
+                        tools:text="ARTICLE TITLE"/>
 
                     <TextView
                         android:id="@+id/article_byline"
@@ -102,7 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/theme_primary"
-                        android:text="XXXXXX 10M ago"/>
+                        tools:text="XXXXXX 10M ago"/>
                 </LinearLayout>
 
                 <TextView
@@ -117,7 +118,7 @@
                     android:textColorLink="@color/theme_accent"
                     android:textSize="@dimen/detail_body_text_size"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-                    android:text="LOOOOOOOOOOOOOOOOOOOOOON TEXT\nMULTILINE TEXT\nSTILLL GOING ON"/>
+                    tools:text="LOOOOOOOOOOOOOOOOOOOOOON TEXT\nMULTILINE TEXT\nSTILLL GOING ON"/>
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
     </android.support.v4.widget.NestedScrollView>
