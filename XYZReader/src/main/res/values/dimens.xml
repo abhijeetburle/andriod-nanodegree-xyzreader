@@ -16,6 +16,6 @@
     <dimen name="item_margin">4dp</dimen>
     <dimen name="item_padding">4dp</dimen>
     <dimen name="item_padding_triple">16dp</dimen>
-    <dimen name="detail_backdrop_height">56dp</dimen>
+    <dimen name="detail_backdrop_height">256dp</dimen>
 
 </resources>

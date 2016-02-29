@@ -17,12 +17,16 @@
 
 <resources>
 
-    <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:fontFamily">sans-serif-condensed/</item>
     </style>
 
-    <style name="Theme.Bacon.Detail">
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    <style name="Theme.Bacon" parent="Base.Theme.Bacon">
+        <item name="android:fontFamily">sans-serif-condensed/</item>
+    </style>
+
+    <style name="Theme.Bacon.Detail" >
+        <item name="android:fontFamily">sans-serif-condensed/</item>
     </style>
 
     <style name="textAppearanceSubtitle">
