@@ -48,8 +48,8 @@ public class ArticleDetailFragment extends Fragment implements
     private long mItemId;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
-    private ObservableScrollView mScrollView;
-    private DrawInsetsFrameLayout mDrawInsetsFrameLayout;
+//    private ObservableScrollView mScrollView;
+//    private DrawInsetsFrameLayout mDrawInsetsFrameLayout;
     private ColorDrawable mStatusBarColorDrawable;
 
     private int mTopInset;
@@ -113,16 +113,16 @@ public class ArticleDetailFragment extends Fragment implements
                 (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle("Title");
 
-        mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
-                mRootView.findViewById(R.id.draw_insets_frame_layout);
-        mDrawInsetsFrameLayout.setOnInsetsCallback(new DrawInsetsFrameLayout.OnInsetsCallback() {
-            @Override
-            public void onInsetsChanged(Rect insets) {
-                mTopInset = insets.top;
-            }
-        });
-
-        mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
+//        mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
+//                mRootView.findViewById(R.id.draw_insets_frame_layout);
+//        mDrawInsetsFrameLayout.setOnInsetsCallback(new DrawInsetsFrameLayout.OnInsetsCallback() {
+//            @Override
+//            public void onInsetsChanged(Rect insets) {
+//                mTopInset = insets.top;
+//            }
+//        });
+//
+//        mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
 //        mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
 //            @Override
 //            public void onScrollChanged() {
@@ -164,7 +164,7 @@ public class ArticleDetailFragment extends Fragment implements
                     (int) (Color.blue(mMutedColor) * 0.9));
         }
         mStatusBarColorDrawable.setColor(color);
-        mDrawInsetsFrameLayout.setInsetBackground(mStatusBarColorDrawable);
+//        mDrawInsetsFrameLayout.setInsetBackground(mStatusBarColorDrawable);
     }
 
     static float progress(float v, float min, float max) {
